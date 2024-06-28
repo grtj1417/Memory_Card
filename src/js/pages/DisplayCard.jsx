@@ -5,7 +5,7 @@ import "../../sass/style.scss"
 export default function DisplayCard({ cardArray, selectedCardArray, setCardArray, setSelectedCardArray, setPage, setResult, displayNum }) {
     const [displayCards, setDisplayCards] = useState([]);
     const [backgroundSrc, setBackgroundSrc] = useState("");
-    const [score, setScore] = useState(1);
+    const [score, setScore] = useState(0);
 
     useEffect(() => {
         const randomNumber = Math.floor(Math.random() * 4) + 1;
@@ -56,7 +56,7 @@ export default function DisplayCard({ cardArray, selectedCardArray, setCardArray
                     <img
                         key={e}
                         className="card-content"
-                        src={`./cards/${e}.webp`}
+                        src={`./images/${e}.webp`}
                         alt={`${e}.webp`}
                         onClick={() => handleCardClick(idx)}
                     />

@@ -17,7 +17,7 @@ export default function Result({ result, setResult, setPage, setCardArray, setSe
                 <div className="lose">
                     <h2>You lost</h2>
                     <video autoPlay id="backgroundVideo">
-                        <source src="./audio/failed.mp4"></source>
+                        <source src="./videos/failed.mp4"></source>
                     </video>
                     <div className="retart-btn">
                         <button onClick={handleRestart}>Restart</button>
@@ -29,7 +29,7 @@ export default function Result({ result, setResult, setPage, setCardArray, setSe
                 <div className="win">
                     <h2>You win</h2>
                     <video autoPlay id="backgroundVideo">
-                        <source src="./audio/win.mp4"></source>
+                        <source src="./videos/win.mp4"></source>
                     </video>
                     <div className="retart-btn">
                         <button onClick={handleRestart}>Restart</button>

@@ -38,9 +38,14 @@ export default {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'public/images', to: 'images' }
-            ]
-        })
+                { from: 'public/images/*.webp', to: 'images/[name][ext]' },
+                { from: 'public/images/*.svg', to: 'images/[name][ext]' },
+                { from: 'public/images/*.jpg', to: 'images/[name][ext]' },
+                { from: 'public/images/*.png', to: 'images/[name][ext]' },
+                { from: 'public/videos/*.mp4', to: 'videos/[name][ext]' }
+            ],
+        }),
+
     ],
     module: {
         rules: [
@@ -51,9 +56,9 @@ export default {
             {
                 test: /\.scss$/,
                 use: [
-                  'style-loader', // 將解析後的CSS轉換成styles標籤插入到HTML中
-                  'css-loader', // 解析CSS文件中的@import和url(), 並處理它们
-                  'sass-loader' // 編譯SCSS文件為CSS
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
             {
@@ -61,6 +66,17 @@ export default {
                 type: 'asset/resource',
                 generator: {
                     filename: 'images/[name][ext]'
+                }
+            },
+            {
+                test: /\.webp$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 8192,
+                        name: '[name].[hash:8].[ext]',
+                        outputPath: 'images/'
+                    }
                 }
             },
             {
