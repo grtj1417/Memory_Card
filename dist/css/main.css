@@ -1,0 +1,387 @@
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css ***!
+  \***************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
+  \**************************************************************************************************************/
+.home-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+}
+.home-page .home-page-title {
+  text-align: center;
+  align-self: center;
+  margin-bottom: 2rem;
+  color: rgb(240, 240, 240);
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0.06em 0.06em 0.13em black;
+  position: absolute;
+  z-index: 99;
+  animation: fade 1.5s linear 0s;
+}
+.home-page .black-mask {
+  background-color: black;
+  opacity: 0.25;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 90;
+}
+.home-page .home-background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn--action {
+  position: relative;
+  z-index: 99;
+  display: block;
+  font-family: Lato;
+  font-weight: 700;
+  width: min-content;
+  height: min-content;
+  padding: 8px 20px;
+  padding: 6px 22px;
+  top: 60%;
+  border-radius: 1rem;
+  background-color: #87cbff;
+  color: #383838;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 10px #54a4e0;
+  opacity: 0;
+  animation: fade 1.5s linear 0.5s forwards;
+}
+.btn--action:hover span {
+  padding: 0 1rem;
+  color: #ffffff;
+}
+.btn--action:active {
+  box-shadow: 0 5px #216192;
+}
+.btn--action span {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.btn--action span:before {
+  display: inline-block;
+  transition: all 0.1s ease 0s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.difficulty-page {
+  height: 100vh;
+  opacity: 0.95;
+  background: url(../images/difficulty.jpg) no-repeat center/100%;
+  align-content: center;
+}
+.difficulty-page .difficulty-description {
+  width: calc(13rem + 11vw);
+  height: min-content;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 900;
+  animation: fade 1.5s linear 0s;
+  background-color: rgba(233, 233, 233, 0.7);
+  box-shadow: 3px 3px 8px rgb(24, 24, 24);
+  border-radius: 20px;
+}
+.difficulty-page .difficulty-btns {
+  width: min-content;
+  height: min-content;
+  display: flex;
+  gap: 0.8rem;
+  margin: 20px auto 0;
+}
+.difficulty-page .difficulty-btns > button {
+  font-family: Lato;
+  font-weight: 700;
+  width: min-content;
+  height: min-content;
+  padding: 8px 20px;
+  border-radius: 15px;
+  background-color: rgb(187, 215, 251);
+  box-shadow: 4px 4px rgb(88, 145, 225);
+  transition: all 0.3s;
+  margin: 0 10px;
+}
+.difficulty-page .difficulty-btns > button:hover {
+  transform: translateY(-1.5px);
+  border: none;
+  box-shadow: 4px 4px rgb(61, 110, 175);
+  color: rgb(255, 255, 255);
+  text-shadow: 0.05em 0.05em 0.1em rgb(96, 96, 96);
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.display-cards {
+  width: 100vw;
+  min-width: 590px;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+}
+.display-cards .cards {
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  margin: 0 auto;
+  justify-self: center;
+  align-self: center;
+  margin-top: 100px;
+}
+.display-cards .cards .card-content {
+  margin-bottom: 20px;
+  width: 7em;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgb(36, 36, 36);
+}
+.display-cards .cards .card-content:hover {
+  transform: translateY(-3px);
+}
+.display-cards .score {
+  display: inline-block;
+  color: rgb(62, 62, 62);
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  z-index: 99;
+  top: 2rem;
+  right: 2rem;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 3px 3px 6px rgb(45, 45, 45);
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.result-page {
+  overflow: hidden;
+}
+.result-page .lose {
+  height: 120vh;
+  background: url(../images/lose_background.jpg) no-repeat center -120px/100%;
+  background-size: cover;
+}
+.result-page .win {
+  height: 120vh;
+  background: url(../images/win_background.jpg) no-repeat center -120px/120%;
+  background-size: cover;
+}
+.result-page > div {
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+.result-page > div video {
+  grid-row: 2/7;
+}
+.result-page > div h2 {
+  grid-row: 1/2;
+  color: rgb(255, 255, 255);
+  font-size: 38px;
+  margin: 0 auto;
+  text-align: center;
+  align-self: center;
+  animation: fade 1.5s linear 0s;
+}
+.result-page > div .retart-btn {
+  position: absolute;
+  z-index: 99;
+  bottom: 0px;
+  grid-row: 8/9;
+  margin-bottom: 50px;
+  justify-self: center;
+}
+.result-page > div .retart-btn > button {
+  font-family: Lato;
+  font-weight: 700;
+  width: min-content;
+  height: min-content;
+  padding: 8px 20px;
+  border-radius: 15px;
+  background-color: rgb(187, 215, 251);
+  box-shadow: 4px 4px rgb(88, 145, 225);
+  transition: all 0.3s;
+  margin: 0 10px;
+}
+.result-page > div .retart-btn > button:hover {
+  transform: translateY(-1.5px);
+  border: none;
+  box-shadow: 4px 4px rgb(61, 110, 175);
+  color: rgb(255, 255, 255);
+  text-shadow: 0.05em 0.05em 0.1em rgb(96, 96, 96);
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*!*******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css (1) ***!
+  \*******************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  font-size: 26px;
+  font-family: Lato;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 99;
+  top: 1rem;
+  left: 1rem;
+}
+
+.home-btn {
+  width: 40px;
+  object-fit: cover;
+  position:absolute;
+  z-index: 99;
+  bottom: 20px;
+  left: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 4px solid rgb(234, 114, 23);
+  cursor: pointer;
+  transition: width 0.5s ease, transform 0.5s ease;
+}
+
+.home-btn:hover {
+  width: 45px;
+  transform: translateY(-2px);
+  border: 5px solid rgb(242, 149, 43);
+}
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
